@@ -9,17 +9,17 @@ $ react-native link
 $ npm start
 ```
 
+## Android
+```bash
+open AwesomeProject/android/ with Android Studio
+touch run button
+```
+
 ## IOS
 ```bash
 open AwesomeProject/ios/AwesomeProject.xcodeproj
 product/scheme/edit scheme, in build configuration set to 'release'
 project/AwesomeProject, use 'Release' for command-line builds
-touch run button
-```
-
-## Android
-```bash
-open AwesomeProject/android/ with Android Studio
 touch run button
 ```
 
