@@ -13,3 +13,8 @@ project/AwesomeProject, use 'Release' for command-line builds
 touch run button
 
 ```
+
+## Android Reverse Proxy
+```sh
+$ adb reverse tcp:8081 tcp:8081
+```
