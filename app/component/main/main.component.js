@@ -21,7 +21,8 @@ class Main extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.content}>
-                    {'Hello world'}
+                    {'Hello world\n'}
+                    {'This is Main Component'}
                 </Text>
             </View>
         );

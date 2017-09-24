@@ -9,8 +9,14 @@ import { StackNavigator } from 'react-navigation'
 
 /** Internal dependencies **/
 import Main from './component/main/main.component'
+import Login from './component/login/login.component'
 
 const AppNavigator = StackNavigator({
+    Login: {
+        name: 'Login Screen',
+        description: 'App Login screen',
+        screen: Login,
+    },
     Main: {
         name: 'Welcome Screen',
         description: 'App welcome screen',
