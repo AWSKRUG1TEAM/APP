@@ -3,7 +3,12 @@
  */
 
 /** External dependencies **/
-import { StyleSheet, Platform } from 'react-native'
+import { StyleSheet, Platform, Dimensions } from 'react-native'
+export const {width, height, scale} = Dimensions.get("window"),
+    vw = width / 100,
+    vh = height / 100,
+    vmin = Math.min(vw, vh),
+    vmax = Math.max(vw, vh);
 
 /** Internal dependencies **/
 
@@ -14,6 +19,12 @@ export default StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#fff',
+    },
+    innerContainer: {
+        width: width,
+        height: height,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     content: {
         fontSize: 20,

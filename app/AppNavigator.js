@@ -10,6 +10,7 @@ import { StackNavigator } from 'react-navigation'
 /** Internal dependencies **/
 import Main from './component/main/main.component'
 import Login from './component/login/login.component'
+import Camera from './component/camera/camera.component'
 
 const AppNavigator = StackNavigator({
     Login: {
@@ -21,7 +22,17 @@ const AppNavigator = StackNavigator({
         name: 'Welcome Screen',
         description: 'App welcome screen',
         screen: Main,
+    },
+    Camera: {
+        name: 'Camera Screen',
+        description: 'App Camera screen',
+        screen: Camera,
+
     }
+}, {
+    initialRouteName: 'Login',
+    headerMode: 'none',
+    // mode: Platform.OS === 'ios' ? 'modal' : 'card',
 });
 
 export default AppNavigator;

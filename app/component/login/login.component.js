@@ -7,7 +7,8 @@ import React, {Component, PropTypes} from 'react'
 import {
     Text,
     View,
-    TouchableOpacity
+    TouchableOpacity,
+    Image
 } from 'react-native'
 
 // Todo: ref: https://react-native-training.github.io/react-native-elements/API/HTML_style_headings/
@@ -26,21 +27,42 @@ class Login extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <FormLabel>Email</FormLabel>
-                <FormInput onChangeText={() => {}}/>
-                <FormLabel>Password</FormLabel>
-                <FormInput onChangeText={() => {}}/>
-                <Button
-                    raised
-                    icon={{name: 'done', size: 32}}
-                    buttonStyle={{backgroundColor: 'red', borderRadius: 10}}
-                    textStyle={{textAlign: 'center'}}
-                    title={`Login`}
-                    onPress={() => {
-                        this.navigateToMain()}
-                    }
-                    style={{marginTop: 20}}
-                />
+                <Image source={require('./../../assets/image/blurImage.png')} style={styles.background}>
+                </Image>
+                <View style={styles.halfContainer}>
+                    <View>
+                        <Text style={styles.mainTitle}>
+                            1 Day 4 Cuts
+                        </Text>
+                    </View>
+                    <View style={styles.forms}>
+                        <FormLabel>Email</FormLabel>
+                        <FormInput onChangeText={() => {}}/>
+                        <FormLabel>Password</FormLabel>
+                        <FormInput onChangeText={() => {}}/>
+                    </View>
+                    <TouchableOpacity>
+                        <Text style={styles.firstSubTitle}>
+                            Forgot your password?
+                        </Text>
+                    </TouchableOpacity>
+                    <Button
+                        raised
+                        icon={{name: 'done', size: 32}}
+                        buttonStyle={{backgroundColor: 'red', borderRadius: 10}}
+                        textStyle={{textAlign: 'center'}}
+                        title={`Login`}
+                        onPress={() => {
+                            this.navigateToMain()}
+                        }
+                        style={{marginTop: 20}}
+                    />
+                    <TouchableOpacity>
+                        <Text style={styles.secondSubTitle}>
+                            Don't have an account?
+                        </Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         );
     }
